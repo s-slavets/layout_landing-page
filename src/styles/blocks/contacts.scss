@@ -1,0 +1,175 @@
+.contacts {
+  &__section-title {
+    margin: 0 0 40px;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: -1.5px;
+
+    @include on-tablet {
+      font-size: 40px;
+    }
+
+    @include on-desktop {
+      font-size: 48px;
+    }
+  }
+
+  &__container {
+    @include page-grid;
+
+    display: grid;
+    row-gap: 48px;
+    margin-top: 48px;
+    grid-template-columns: 1fr;
+
+    @include on-tablet {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+
+    @include on-desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    &-contact-title {
+      font-weight: 700;
+      font-style: bold;
+      font-size: 16px;
+      line-height: 27px;
+      color: $text-color-dark;
+    }
+
+    &-ph-a {
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 14px;
+      line-height: 27px;
+      color: $text-color-dark;
+      margin: 0;
+    }
+
+    &-phone &-address {
+      font-weight: 700;
+      font-style: bold;
+      font-size: 16px;
+      line-height: 27px;
+      color: $text-color-dark;
+    }
+
+    &-link {
+      color: $text-color-dark;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-input {
+      width: 280px;
+      height: 48px;
+      background: #f8f8fa;
+      border: none;
+
+      @include on-tablet {
+        width: 288px;
+      }
+
+      @include on-desktop {
+        width: 411px;
+      }
+
+      &--text {
+        font-family: Cinzel, Times, sans-serif;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 12px;
+        display: block;
+        box-sizing: border-box;
+      }
+    }
+
+    &-message {
+      width: 280px;
+      height: 144px;
+      background: #f8f8fa;
+      border: none;
+
+      @include on-tablet {
+        width: 288px;
+      }
+
+      @include on-desktop {
+        width: 411px;
+      }
+
+      &--text-1 {
+        font-family: Cinzel, Times, sans-serif;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 12px;
+        text-align: top left;
+        display: block;
+        box-sizing: border-box;
+      }
+    }
+
+    &-primary {
+      margin-top: 32px;
+      width: 280px;
+      height: 56px;
+      background: #ae1c23;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+
+      @include on-tablet {
+        width: 288px;
+      }
+
+      @include on-desktop {
+        width: 411px;
+      }
+
+      &:hover {
+        background-color: #961927;
+        border-color: #961927;
+        transform: scale(1.05);
+      }
+
+      &-text {
+        font-family: Cinzel, Times, sans-serif;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 16px;
+        line-height: 27px;
+        text-align: center;
+        color: $main-color-white;
+        display: block;
+
+        &:hover {
+          color: rgb(22, 22, 22);
+        }
+      }
+    }
+  }
+}

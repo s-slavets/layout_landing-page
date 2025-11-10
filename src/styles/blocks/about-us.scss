@@ -1,0 +1,113 @@
+.about-us {
+  @include page-grid;
+
+  &__titles {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / 3;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 5;
+    }
+
+    &-p1-red {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 140%;
+      color: $main-color-red;
+      text-align: left;
+    }
+
+    &-section-title {
+      margin: 0;
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-style: bold;
+      font-size: 32px;
+      line-height: 100%;
+      text-align: left;
+      letter-spacing: -1.5px;
+
+      @include on-tablet {
+        font-size: 40px;
+      }
+
+      @include on-desktop {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &__museum {
+    display: grid;
+
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 4 / 7;
+    }
+
+    @include on-desktop {
+      grid-column: 6 / 12;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-style: bold;
+      font-size: 24px;
+      line-height: 30px;
+      color: $text-color-dark;
+      text-align: left;
+    }
+
+    &-schedule {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      column-gap: 24px;
+
+      &-column {
+        display: flex;
+        flex-direction: column;
+
+        &-time {
+          font-weight: 700;
+          font-style: bold;
+          font-size: 16px;
+          line-height: 27px;
+          color: $text-color-dark;
+        }
+
+        &-day {
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 16px;
+          line-height: 27px;
+          color: $text-color-dark;
+        }
+      }
+    }
+
+    &-closed-title {
+      font-size: 16px;
+      line-height: 27px;
+      font-weight: 700;
+      font-style: bold;
+      color: $text-color-dark;
+    }
+
+    &-closed-day {
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 27px;
+      color: $text-color-dark;
+
+      &--word--wrap {
+        word-wrap: break-word;
+      }
+    }
+  }
+}
