@@ -123,8 +123,8 @@
     }
 
     &--square {
-      height: 0;
-      padding-bottom: 100%;
+      aspect-ratio: 1/1;
+      display: block;
 
       @include on-tablet {
         grid-column: span 2;
@@ -133,6 +133,35 @@
       @include on-desktop {
         grid-column: span 4;
       }
+    }
+
+    &--Layer-50 {
+      grid-column: span 1;
+      display: block;
+
+      @include on-tablet {
+        display: none;
+      }
+
+      @include on-desktop {
+        grid-column: span 4;
+        display: block;
+      }
+    }
+  }
+
+  &__photos--east {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8px;
+
+    @include on-tablet {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 24px;
+    }
+
+    @include on-desktop {
+      grid-template-columns: repeat(12, 1fr);
     }
   }
 
@@ -144,11 +173,7 @@
     display: block;
     box-sizing: border-box;
     transition: 0.3s;
-    gap: 8px;
-
-    @include on-tablet {
-      gap: 24px;
-    }
+    object-position: 100%;
 
     &:hover {
       transform: scale(1.05);

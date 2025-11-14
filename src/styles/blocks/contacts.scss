@@ -57,19 +57,21 @@
       margin: 0;
     }
 
-    &-phone &-address {
+    &-phone,
+    &-address {
       font-weight: 700;
       font-style: bold;
       font-size: 16px;
       line-height: 27px;
-      color: $text-color-dark;
     }
 
     &-link {
       color: $text-color-dark;
       text-decoration: none;
+      transition: color 0.3s ease;
 
       &:hover {
+        color: $main-color-red;
         text-decoration: underline;
       }
     }
