@@ -113,6 +113,7 @@
       height: 144px;
       background: #f8f8fa;
       border: none;
+      resize: none;
 
       @include on-tablet {
         width: 288px;

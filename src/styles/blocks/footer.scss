@@ -1,6 +1,12 @@
 .footer {
-  max-width: 100%;
+  bottom: 0;
+  z-index: -1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.picture__photo {
+  max-width: 100%;
+  height: auto;
 }
