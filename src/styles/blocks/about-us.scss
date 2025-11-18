@@ -60,6 +60,7 @@
       line-height: 30px;
       color: $text-color-dark;
       text-align: left;
+      margin: 20px 0 16px;
     }
 
     &-schedule {
@@ -73,6 +74,7 @@
         flex-direction: column;
 
         &-time {
+          margin: 0 0 2px;
           font-weight: 700;
           font-style: bold;
           font-size: 16px;
@@ -81,6 +83,7 @@
         }
 
         &-day {
+          margin: 0 0 2px;
           font-weight: 400;
           font-style: Regular;
           font-size: 16px;
@@ -91,6 +94,7 @@
     }
 
     &-closed-title {
+      margin: 15px 0 0;
       font-size: 16px;
       line-height: 27px;
       font-weight: 700;
@@ -99,6 +103,7 @@
     }
 
     &-closed-day {
+      margin: 0;
       font-weight: 400;
       font-style: Regular;
       font-size: 16px;

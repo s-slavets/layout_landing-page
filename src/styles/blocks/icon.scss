@@ -13,19 +13,19 @@
   }
 
   &--phone {
-    background-image: url(../images/header/Icon-Phone-call.png);
+    background-image: url(../images/header/Icon-Phone-call.svg);
 
     @include hover(transform, scale(1.2));
   }
 
   &--menu {
-    background-image: url(../images/header/Icon-Burger-menu.png);
+    background-image: url(../images/header/Icon-Burger-menu.svg);
 
     @include hover(transform, scale(1.2));
   }
 
   &--close {
-    background-image: url(../images/aside/Icon-Close.png);
+    background-image: url(../images/aside/Icon-Close.svg);
 
     @include hover(transform, scale(1.2));
   }

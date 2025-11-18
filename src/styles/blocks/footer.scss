@@ -1,12 +1,10 @@
 .footer {
-  bottom: 0;
   z-index: -1;
+  min-height: 180px;
+  background-image: url(../images/footer/image-footer.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.picture__photo {
-  max-width: 100%;
-  height: auto;
+  display: block;
+  box-sizing: border-box;
 }
