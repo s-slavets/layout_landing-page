@@ -1,4 +1,7 @@
 .contacts {
+  margin: 0;
+  padding: 0;
+
   &__section-title {
     margin: 0 0 40px;
     font-weight: 700;
@@ -19,28 +22,31 @@
   }
 
   &__container {
+    display: grid;
+
     @include page-grid;
 
-    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: span 2;
     row-gap: 48px;
     margin-top: 48px;
-    grid-template-columns: 1fr;
 
     @include on-tablet {
       grid-template-columns: 1fr 1fr;
-      align-items: start;
+      grid-column: span 6;
     }
 
     @include on-desktop {
       grid-template-columns: 1fr 1fr 1fr;
+      grid-column: span 12;
     }
   }
 
   &__block {
-    display: flex;
-    flex-direction: column;
+    display: grid;
 
     &-contact-title {
+      margin: 0 0 16px;
       font-weight: 700;
       font-style: bold;
       font-size: 16px;
@@ -49,16 +55,24 @@
     }
 
     &-ph-a {
+      margin: 0;
       font-weight: 400;
       font-style: Regular;
       font-size: 14px;
       line-height: 27px;
       color: $text-color-dark;
-      margin: 0;
     }
 
-    &-phone,
+    &-phone {
+      margin: 0 0 8px;
+      font-weight: 700;
+      font-style: bold;
+      font-size: 16px;
+      line-height: 27px;
+    }
+
     &-address {
+      margin: 0;
       font-weight: 700;
       font-style: bold;
       font-size: 16px;
@@ -78,22 +92,24 @@
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+
     gap: 16px;
+    width: 100%;
+    align-items: start;
 
     &-input {
-      width: 280px;
+      min-width: 280px;
       height: 48px;
       background: #f8f8fa;
       border: none;
 
       @include on-tablet {
-        width: 288px;
+        min-width: 288px;
       }
 
       @include on-desktop {
-        width: 411px;
+        min-width: 411px;
       }
 
       &--text {
@@ -109,18 +125,18 @@
     }
 
     &-message {
-      width: 280px;
+      min-width: 280px;
       height: 144px;
       background: #f8f8fa;
       border: none;
       resize: none;
 
       @include on-tablet {
-        width: 288px;
+        min-width: 288px;
       }
 
       @include on-desktop {
-        width: 411px;
+        min-width: 411px;
       }
 
       &--text-1 {
@@ -138,7 +154,7 @@
 
     &-primary {
       margin-top: 32px;
-      width: 280px;
+      min-width: 280px;
       height: 56px;
       background: #ae1c23;
       border: none;
@@ -146,11 +162,11 @@
       transition: 0.3s;
 
       @include on-tablet {
-        width: 288px;
+        min-width: 288px;
       }
 
       @include on-desktop {
-        width: 411px;
+        min-width: 411px;
       }
 
       &:hover {
